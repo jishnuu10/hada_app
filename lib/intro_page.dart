@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hada_app/signin_page.dart';
 
 
 
@@ -68,7 +69,10 @@ class IntroPage extends StatelessWidget {
                 width: 138,
                 child: ElevatedButton(
                   onPressed: () {
-                    
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SigninPage()),
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: buttonColor,
