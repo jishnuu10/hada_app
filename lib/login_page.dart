@@ -7,12 +7,24 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color(0xFFF5FCFF), 
-        elevation: 0
-        ),
-      body: Login(mainText: 'Login your account', buttonText: 'LOGIN',)
-        
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(backgroundColor: Colors.transparent, elevation: 0),
+      body: Stack(
+        children: [
+          Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Color(0xFFF5FCFF), Color(0xFFCCD7DD)],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+            ),
+          ),
+          SafeArea(
+            child: Login(mainText: 'Login your account', buttonText: 'LOGIN'),
+          ),
+        ],
+      ),
     );
   }
 }

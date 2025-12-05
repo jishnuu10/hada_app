@@ -13,6 +13,18 @@ class _StartingPageState extends State<StartingPage> {
   final PageController _pageController = PageController();
   int _currentIndex = 0;
 
+  
+  final List<Color> activeDotColors = [
+    Color(0xFF9E9E9E),           
+    Color(0xFF000000),           
+    Color(0xFF3D84A4),      
+  ];
+  final List<Color> inactiveDotColors = [
+    Color(0xFF464646),
+    Color(0xFF9E9E9E),
+    Color(0x803D84A4),
+  ];
+
   final List<Widget> _page = [
     IntroPage(
       imagePath: 'images/hada-logo-white 1.png',
@@ -65,7 +77,7 @@ class _StartingPageState extends State<StartingPage> {
             itemBuilder: (context, index) => _page[index],
           ),
           Positioned(
-            bottom: 220,
+            bottom: 230,
             left: 0,
             right: 0,
             child: Center(
@@ -76,8 +88,8 @@ class _StartingPageState extends State<StartingPage> {
                   spacing: 16,
                   dotHeight: 13,
                   dotWidth: 13,
-                  activeDotColor: Colors.white,
-                  dotColor: Colors.grey,
+                  activeDotColor: activeDotColors[_currentIndex],
+                  dotColor: inactiveDotColors[_currentIndex],
                 ),
               ),
             ),
