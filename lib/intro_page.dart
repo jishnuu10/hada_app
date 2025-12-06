@@ -118,7 +118,7 @@ class IntroPage extends StatelessWidget {
               onPressed: () {},
               child: Text(
                 'Request Here',
-                style: TextStyle(color: rqtextColor, fontSize: 14),
+                style: TextStyle(color: rqtextColor, fontSize: 14, fontWeight: FontWeight.w400),
               ),
             ),
           ],

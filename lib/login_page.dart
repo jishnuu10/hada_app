@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hada_app/email_verify_page.dart';
 import 'package:hada_app/signin_page.dart';
 
 class LoginPage extends StatelessWidget {
@@ -21,7 +22,14 @@ class LoginPage extends StatelessWidget {
             ),
           ),
           SafeArea(
-            child: Login(mainText: 'Login your account', buttonText: 'LOGIN'),
+            child: Login(mainText: 'Login your account', buttonText: 'LOGIN',
+              elevatedButtonOnPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => EmailVerifyPage()),
+                );
+              },
+            ),
           ),
         ],
       ),

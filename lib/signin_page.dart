@@ -35,6 +35,9 @@ class SigninPage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const LoginPage()),
                 );
               },
+              elevatedButtonOnPressed: () {
+                
+              },
             ),
           ),
         ],
@@ -49,13 +52,14 @@ class Login extends StatelessWidget {
   final String? bottomText;
   final String? labelText;
   final VoidCallback? onPressed;
+  final VoidCallback? elevatedButtonOnPressed;
   const Login({
     super.key,
     required this.mainText,
     required this.buttonText,
     this.bottomText,
     this.labelText,
-    this.onPressed,
+    this.onPressed, this.elevatedButtonOnPressed,
   });
 
   @override
@@ -105,12 +109,15 @@ class Login extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 20),
-          const Text(
-            'Username/Email',
-            style: TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.w300,
-              letterSpacing: 0.2,
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8),
+            child: const Text(
+              'Username/Email',
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w300,
+                letterSpacing: 0.2,
+              ),
             ),
           ),
           const TextField(
@@ -127,12 +134,15 @@ class Login extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 20),
-          const Text(
-            'Password',
-            style: TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.w300,
-              letterSpacing: 0.2,
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8),
+            child: const Text(
+              'Password',
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w300,
+                letterSpacing: 0.2,
+              ),
             ),
           ),
           const TextField(
@@ -158,7 +168,7 @@ class Login extends StatelessWidget {
               height: 57.07,
               width: 341.26,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: elevatedButtonOnPressed,
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF0072BC),
                   shape: RoundedRectangleBorder(),
