@@ -51,7 +51,7 @@ class _StartingPageState extends State<StartingPage> {
     IntroPage(
       imagePath: 'images/hada-logo-white 1 (2).png',
       gradient1: Color(0xFF5FCBFF),
-      gradient2: Color(0xFF75D2FF),
+      gradient2: Color(0xFF75D2FF).withOpacity(0.5),
       imagePath2: 'images/Group 118 (2).png',
       buttonColor: Colors.blue,
       headingColor: Colors.white,

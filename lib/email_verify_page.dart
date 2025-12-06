@@ -15,7 +15,7 @@ class EmailVerifyPage extends StatelessWidget {
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [Color(0xFFF5FCFF), Color(0xFFCCD7DD)],
-                begin: Alignment.topLeft,
+                begin: Alignment.topRight,
                 end: Alignment.bottomRight,
               ),
             ),
